@@ -1,0 +1,219 @@
+/* 
+    CSS RESET 
+*/
+
+/* Better box sizing */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+/* Delete default margin, padding and font style */
+* {
+    margin: 0;
+    padding: 0;
+    font: inherit;
+}
+
+/* Responsive images etc. */
+img, picture, svg, video {
+    display: block;
+    max-width: 100%;
+}
+
+/*
+    VARIABLES
+*/
+
+:root {
+    --Clr-Red:             hsl(0, 78%, 62%);
+    --Clr-Cyan:            hsl(180, 62%, 55%);
+    --Clr-Orange:          hsl(34, 97%, 64%);
+    --Clr-Blue:            hsl(212, 86%, 64%);
+    --Clr-Very-Dark-Blue:  hsl(234, 12%, 34%);
+    --Clr-Grayish-Blue:    hsl(229, 6%, 66%);
+    --Clr-Very-Light-Gray: hsl(0, 0%, 98%);
+
+    --Fw-Light: 200;
+    --Fw-Reguar: 400;
+    --Fw-Bold: 600;
+}
+
+/*
+    COLORS
+*/
+
+p, header .lower, .attribution {
+    color: var(--Clr-Grayish-Blue)
+}
+
+h1, h2, .upper {
+    color: var(--Clr-Very-Dark-Blue);
+}
+
+/*
+    BODY
+*/
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.9375rem;
+}
+
+/*
+    MAIN
+*/
+
+main {
+    margin: auto;
+    padding: 2rem;
+}
+
+/* 
+    HEADER
+*/
+
+header {
+    margin: auto;
+    margin-bottom: 4.2rem;
+    width: 20rem;
+
+    text-align: center;
+}
+    header .upper {
+        font-size: 1.5rem;
+        font-weight: var(--Fw-Light);
+    }
+
+    header h1 {
+        font-size: 1.5rem;
+        font-weight: var(--Fw-Bold);
+        margin-bottom: 1.2rem;
+    }
+
+/*
+    SECTIONS
+*/
+
+.sections {
+    width: 20rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.middle {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+section {
+    height: 14rem;
+    border-radius: 5px;
+    box-shadow: 0px 13px 24px 0px rgb(216, 217, 238);
+    border-top: 4px solid;
+
+    background-repeat: no-repeat;
+    background-position: bottom 20px right 20px;
+
+    padding: 1.3rem;
+}
+
+section h2 {
+    font-size: 1.2rem;
+    font-weight: var(--Fw-Bold);
+    margin-bottom: 0.5rem;
+}
+section p {
+    font-size: 0.85rem;
+}
+
+
+.supervisor {
+    background-image: url(images/icon-supervisor.svg);
+
+    border-color: var(--Clr-Cyan);
+}
+
+.team-builder {
+    background-image: url(images/icon-team-builder.svg);
+
+    border-color: var(--Clr-Red);
+}
+
+.karma {
+    background-image: url(images/icon-karma.svg);
+
+    border-color: var(--Clr-Orange);
+}
+
+.calculator {
+    background-image: url(images/icon-calculator.svg);
+
+    border-color: var(--Clr-Blue);
+}
+
+/*
+    MEDIA
+*/
+
+@media(min-width:1220px) {
+    header {
+        width: 33rem;
+    }
+
+    header .upper, header h1 {
+        font-size: 2.2rem;
+    }
+
+    header h1 {
+        margin-bottom: 1.2rem;
+    }
+
+    section h2 {
+        font-size: 1.25rem;
+        margin-bottom: 0.75rem;
+    }
+
+    .sections {
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 30px;
+        width: 70rem;
+    }
+
+    section {
+        height: 16rem;
+        width: 22rem;
+
+        padding: 2rem;
+        
+        background-position: bottom 30px right 30px;
+    }
+
+    .middle {
+        height: 35rem;
+        width: 22rem;
+
+        gap: 30px
+    }
+}
+
+
+/*
+    FOOTER
+*/
+
+.attribution { 
+    font-size: 11px; 
+    text-align: center; }
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
